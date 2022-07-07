@@ -763,9 +763,8 @@
                                                             <rect key="frame" x="18" y="0.0" width="250" height="24"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
-                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qhe-kE-4In">
+                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="qhe-kE-4In">
                                                                     <rect key="frame" x="0.0" y="4" width="250" height="16"/>
-                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="48X-CS-Yvk">
                                                                         <font key="font" usesAppearanceFont="YES"/>
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -773,6 +772,11 @@
                                                                     </textFieldCell>
                                                                 </textField>
                                                             </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="qhe-kE-4In" firstAttribute="centerY" secondItem="VW4-nN-PwL" secondAttribute="centerY" id="02m-I8-fWX"/>
+                                                                <constraint firstItem="qhe-kE-4In" firstAttribute="centerX" secondItem="VW4-nN-PwL" secondAttribute="centerX" id="bdp-Ul-R0n"/>
+                                                                <constraint firstItem="qhe-kE-4In" firstAttribute="leading" secondItem="VW4-nN-PwL" secondAttribute="leading" constant="2" id="n2e-fP-bY4"/>
+                                                            </constraints>
                                                             <connections>
                                                                 <outlet property="textField" destination="qhe-kE-4In" id="4mH-z0-smC"/>
                                                             </connections>
@@ -818,11 +822,15 @@
             <objects>
                 <viewController id="HdV-3Q-L7j" customClass="DetailViewController" customModule="_1_stom_viewer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="EOK-Bn-7if">
-                        <rect key="frame" x="0.0" y="0.0" width="270" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="500" height="500"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R6l-Ab-bKG">
-                                <rect key="frame" x="0.0" y="0.0" width="270" height="300"/>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1" verticalCompressionResistancePriority="1" translatesAutoresizingMaskIntoConstraints="NO" id="R6l-Ab-bKG">
+                                <rect key="frame" x="0.0" y="0.0" width="500" height="500"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="500" id="kuj-pM-zg4"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="500" id="u04-3x-oI0"/>
+                                </constraints>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="yqf-bW-qp5"/>
                             </imageView>
                         </subviews>
@@ -839,7 +847,7 @@
                 </viewController>
                 <customObject id="8Fa-Ph-ANn" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="633" y="841"/>
+            <point key="canvasLocation" x="717" y="1024"/>
         </scene>
     </scenes>
 </document>
