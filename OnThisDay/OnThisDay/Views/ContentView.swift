@@ -13,8 +13,10 @@ struct ContentView: View {
   
   @EnvironmentObject var appState: AppState
   
+  @State private var searchText = ""
+  
   var events: [Event] {
-    appState.dataFor(eventType: eventType)
+    appState.dataFor(eventType: eventType, searchText: searchText)
   }
   
   var body: some View {
@@ -31,6 +33,10 @@ struct ContentView: View {
       idealHeight: 800,
       maxHeight: .infinity
     )
+    .toolbar {
+      Toolbar()
+    }
+    .searchable(text: $searchText)
   }
 }
 

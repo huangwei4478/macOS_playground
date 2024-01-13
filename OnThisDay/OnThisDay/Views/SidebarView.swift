@@ -9,6 +9,8 @@ import SwiftUI
 
 struct SidebarView: View {
   
+  @EnvironmentObject var appState: AppState
+  @AppStorage("showTotals") var showTotals = true
   @Binding var selection: EventType?
   
   var body: some View {
@@ -17,6 +19,7 @@ struct SidebarView: View {
         ForEach(EventType.allCases, id: \.self) {
           type in
           Text(type.rawValue)
+            .badge(showTotals ? appState.countFor(eventType: type) : 0)
         }
       }
     }
